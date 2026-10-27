@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adediwura Afolabi · Portfolio</title>
+<style>
+:root{--bg:#faf8f4;--card:#fff;--ink:#1d1b18;--mute:#6b665e;--line:#e6e1d8;--acc:#b8650f;--acc2:#f6e7d2;--bar:#d98b2b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--card:#201d18;--ink:#f3efe8;--mute:#a39c90;--line:#34302a;--acc:#f0a54a;--acc2:#33271a;--bar:#e39a3a}}
+:root[data-theme="dark"]{--bg:#15130f;--card:#201d18;--ink:#f3efe8;--mute:#a39c90;--line:#34302a;--acc:#f0a54a;--acc2:#33271a;--bar:#e39a3a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
+main{max-width:920px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:6px 0 8px}
+h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:44px 0 14px;font-family:system-ui,sans-serif}
+p{margin:0}.mute{color:var(--mute)}
+.tag{font:600 12px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpi b{display:block;font-size:34px;line-height:1.1;color:var(--acc)}
+.kpi span{font:14px system-ui,sans-serif;color:var(--mute)}
+.todo b{color:var(--mute)}
+.funnel .row{margin:14px 0}
+.funnel .lab{display:flex;justify-content:space-between;font:14px system-ui,sans-serif;margin-bottom:5px}
+.track{background:var(--acc2);border-radius:8px;height:30px;overflow:hidden}
+.fill{background:var(--bar);height:100%;border-radius:8px}
+.steps{counter-reset:s;display:grid;gap:12px}
+.step{display:grid;grid-template-columns:36px 1fr;gap:12px}
+.step:before{counter-increment:s;content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--acc2);color:var(--acc);display:grid;place-items:center;font:700 15px system-ui,sans-serif}
+.step h3{margin:0 0 2px;font-size:17px}
+a.link{display:block;text-decoration:none;color:inherit}
+a.link:hover{border-color:var(--acc)}
+a.link strong{display:block;font-size:16px}
+a.link span{font:13px system-ui,sans-serif;color:var(--mute)}
+.add{font:600 11px system-ui,sans-serif;color:var(--acc);background:var(--acc2);padding:2px 8px;border-radius:99px;display:inline-block;margin-top:8px}
+.num{font:700 12px system-ui,sans-serif;color:var(--acc);background:var(--acc2);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;margin-bottom:8px}
+.seg{display:flex;gap:4px;margin-top:10px}.seg i{font:600 12px system-ui,sans-serif;font-style:normal;background:var(--bar);color:#fff;padding:9px 8px;border-radius:8px;white-space:nowrap;overflow:hidden}
+.wrap{overflow-x:auto;margin-top:12px}table{border-collapse:collapse;width:100%;min-width:560px;font:14px/1.4 system-ui,sans-serif}
+th{text-align:left;color:var(--mute);font-weight:600;border-bottom:1px solid var(--line);padding:8px 6px}td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.more{color:var(--acc);font:600 14px system-ui,sans-serif;text-decoration:none}
+img{max-width:100%;border-radius:8px;margin-top:10px;border:1px solid var(--line)}
+.seg button{font:600 12px system-ui,sans-serif;background:var(--bar);color:#fff;border:0;padding:11px 8px;border-radius:8px;white-space:nowrap;overflow:hidden;cursor:pointer;opacity:.6}
+.seg button:nth-child(2){filter:brightness(.92)}.seg button.on,.seg button:hover{opacity:1}.seg button.on{outline:2px solid var(--ink);outline-offset:1px}
+.chip{font:600 12px system-ui,sans-serif;background:var(--acc2);color:var(--acc);border:1px solid var(--line);border-radius:99px;padding:4px 12px;margin-right:6px;cursor:pointer}.chip.on{outline:2px solid var(--ink)}
+.tall{max-height:380px;overflow:auto}
+.cover{aspect-ratio:1;background-size:cover;background-position:center;background-color:#0f1218;position:relative;padding:0;overflow:hidden;display:block;text-decoration:none}.cover:hover{border-color:var(--acc)}.cover em{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 10px;font:600 14px system-ui,sans-serif;font-style:normal;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75))}</style>
+</head>
+<body>
+<main>
+<p class="tag">Portfolio</p>
+<h1>Adediwura Afolabi</h1>
+<p class="mute">Product marketer and Mechatronics Engineering undergraduate. Positioning, go-to-market and growth, with an engineering background. Each page below shows the work, the numbers and the thinking behind it.</p>
+<h2>Work</h2>
+<div class="grid">
+<a class="card link" href="ovies-kitchen/"><span class="tag">Case study</span><strong>Ovie’s Kitchen</strong><span>From a dormant account to 250+ paid transactions</span></a>
+<a class="card link" href="bootclass/"><span class="tag">Case study</span><strong>BootClass</strong><span>Marathon Revision Class: 500+ reached, 300+ enrolled</span></a>
+<a class="card link" href="smart-systems/"><span class="tag">Case study</span><strong>Smart Systems Research Laboratory</strong><span>A 4-degree-of-freedom robot arm, modelled in SolidWorks</span></a>
+<div class="card"><span class="tag">Coming soon</span><strong>Leadership and communities</strong><span class="mute" style="font:13px system-ui,sans-serif">Seminars, committees and community management</span></div>
+</div>
+</main>
+</body>
+</html>
