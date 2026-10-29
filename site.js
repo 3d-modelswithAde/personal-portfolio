@@ -486,41 +486,88 @@
         '&body=' +
         encodeURIComponent(formattedBody);
 
-      // Attempt API route if configured on deployment; otherwise provide truthful mailto handoff
-      fetch('/api/contact', {
+      var payloadObj = {
+        name: nameVal,
+        email: emailVal,
+        reason: reasonVal,
+        message: msgVal,
+        objective: reasonVal,
+        process: msgVal,
+        company: ''
+      };
+
+      function showSuccessBanner() {
+        statusBox.className = 'form-status ok';
+        statusBox.innerHTML =
+          '<strong>Enquiry sent.</strong> Thank you, ' +
+          escapeHtml(nameVal) +
+          '. Your message has been recorded and delivered to Adediwura Afolabi.';
+        statusBox.hidden = false;
+      }
+
+      function tryServerApi() {
+        return fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payloadObj)
+        })
+          .then(function (res) {
+            return res
+              .json()
+              .then(function (data) {
+                return { status: res.status, data: data };
+              })
+              .catch(function () {
+                return { status: res.status, data: null };
+              });
+          })
+          .then(function (result) {
+            if (
+              result.status >= 200 &&
+              result.status < 300 &&
+              result.data &&
+              (result.data.ok || result.data.success)
+            ) {
+              showSuccessBanner();
+              return;
+            }
+            triggerEmailFallback(mailtoHref, subjectLine, formattedBody);
+          })
+          .catch(function () {
+            triggerEmailFallback(mailtoHref, subjectLine, formattedBody);
+          });
+      }
+
+      // 1. Try direct n8n webhook (CORS enabled for https://adediwura-afolabi.vercel.app and localhost), then Vercel /api/contact
+      var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timeoutId = controller
+        ? setTimeout(function () {
+            controller.abort();
+          }, 4000)
+        : null;
+
+      fetch('http://localhost:5678/webhook/portfolio-enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: nameVal,
-          email: emailVal,
-          reason: reasonVal,
-          message: msgVal
-        })
+        body: JSON.stringify(payloadObj),
+        signal: controller ? controller.signal : undefined
       })
         .then(function (res) {
-          return res
-            .json()
-            .then(function (data) {
-              return { status: res.status, data: data };
-            })
-            .catch(function () {
-              return { status: res.status, data: null };
-            });
+          if (timeoutId) clearTimeout(timeoutId);
+          return res.json().then(function (data) {
+            return { ok: res.ok, data: data };
+          });
         })
-        .then(function (result) {
-          if (result.status >= 200 && result.status < 300 && result.data && result.data.ok) {
-            statusBox.className = 'form-status ok';
-            statusBox.innerHTML =
-              '<strong>Enquiry sent.</strong> Thank you, ' +
-              escapeHtml(nameVal) +
-              '. Your message has been delivered to Adediwura Afolabi.';
-            statusBox.hidden = false;
+        .then(function (n8nRes) {
+          if (n8nRes.ok && n8nRes.data && n8nRes.data.success === true) {
+            showSuccessBanner();
             return;
           }
-          triggerEmailFallback(mailtoHref, subjectLine, formattedBody);
+          return tryServerApi();
         })
         .catch(function () {
-          triggerEmailFallback(mailtoHref, subjectLine, formattedBody);
+          if (timeoutId) clearTimeout(timeoutId);
+          return tryServerApi();
         })
         .finally(function () {
           isSubmitting = false;
