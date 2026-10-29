@@ -501,7 +501,9 @@
         statusBox.innerHTML =
           '<strong>Enquiry sent.</strong> Thank you, ' +
           escapeHtml(nameVal) +
-          '. Your message has been recorded and delivered to Adediwura Afolabi.';
+          '. Your message has been delivered to ' +
+          EMAIL +
+          '.';
         statusBox.hidden = false;
       }
 
@@ -543,7 +545,7 @@
       var timeoutId = controller
         ? setTimeout(function () {
             controller.abort();
-          }, 4000)
+          }, 25000)
         : null;
 
       fetch('http://localhost:5678/webhook/portfolio-enquiry', {
