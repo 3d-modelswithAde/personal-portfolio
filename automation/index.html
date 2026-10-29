@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adediwura Afolabi · Connecting Enquiries Across n8n, HubSpot, Gmail and Telegram</title>
+<meta name="description" content="A customer-enquiry workflow built with n8n, HubSpot, Gmail and Telegram, and how the same approach could support community onboarding.">
+<style>
+:root{--bg:#faf8f4;--card:#fff;--ink:#1d1b18;--mute:#6b665e;--line:#e6e1d8;--acc:#b8650f;--acc2:#f6e7d2;--bar:#d98b2b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--card:#201d18;--ink:#f3efe8;--mute:#a39c90;--line:#34302a;--acc:#f0a54a;--acc2:#33271a;--bar:#e39a3a}}
+:root[data-theme="dark"]{--bg:#15130f;--card:#201d18;--ink:#f3efe8;--mute:#a39c90;--line:#34302a;--acc:#f0a54a;--acc2:#33271a;--bar:#e39a3a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,serif}
+main{max-width:920px;margin:0 auto;padding:36px 20px 64px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 12px}
+p{margin:0}.mute{color:var(--mute)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);padding:16px}.more{font:600 14px system-ui,sans-serif;text-decoration:none}
+</style>
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div><a class="name" href="../">Adediwura Afolabi</a>
+<nav aria-label="Main"><a href="../#work">Work</a><a href="../smart-systems/">Hardware</a><a href="../automation/">Automation</a><a href="../#about">About</a><a href="../#contact">Contact</a></nav></div></header>
+<main id="main">
+<p><a class="more" href="../">← All work</a></p>
+<p class="mute" style="font:14px system-ui,sans-serif;margin-top:12px">Case study · Automation</p>
+<h1>Connecting Enquiries Across n8n, HubSpot, Gmail and Telegram</h1>
+<p class="lede mute">A customer-enquiry workflow that connects a CRM, email and a Telegram group through n8n.</p>
+<h2>The problem</h2>
+<p style="max-width:68ch">Enquiries arrive in one place, get recorded in another and are answered somewhere else. Moving details between tools by hand is slow and easy to get wrong, so I built a workflow to connect them.</p>
+<h2>The workflow</h2>
+<p style="max-width:68ch" class="mute">n8n is the orchestration layer. It connects to HubSpot, which holds the contact records, to Gmail, for email, and to a Telegram bot that I added to a group, so the workflow can notify people there.</p>
+<!-- VERIFY: confirm every arrow and label below against the live n8n workflow before publishing. -->
+<svg class="flow" viewBox="0 0 700 250" role="img" aria-label="Diagram: a customer enquiry goes into n8n, which connects to HubSpot, Gmail and a Telegram bot in a group.">
+<defs></defs>
+<g><rect x="10" y="95" width="150" height="60" rx="4"/><text x="85" y="122" text-anchor="middle">Customer enquiry</text><text class="s" x="85" y="141" text-anchor="middle">where it comes in</text></g>
+<g class="hub"><rect x="260" y="95" width="150" height="60" rx="4"/><text x="335" y="130" text-anchor="middle">n8n workflow</text></g>
+<g><rect x="520" y="10" width="170" height="60" rx="4"/><text x="605" y="45" text-anchor="middle">HubSpot (CRM)</text></g>
+<g><rect x="520" y="95" width="170" height="60" rx="4"/><text x="605" y="130" text-anchor="middle">Gmail</text></g>
+<g><rect x="520" y="180" width="170" height="60" rx="4"/><text x="605" y="205" text-anchor="middle">Telegram bot</text><text class="s" x="605" y="223" text-anchor="middle">added to the group</text></g>
+<path d="M160 125H252"/><polygon points="260,125 250,120 250,130"/>
+<path d="M410 115C460 115 460 40 512 40"/><polygon points="520,40 510,35 510,45"/>
+<path d="M410 125H512"/><polygon points="520,125 510,120 510,130"/>
+<path d="M410 135C460 135 460 210 512 210"/><polygon points="520,210 510,205 510,215"/>
+</svg>
+<h2>Watch the Workflow in Action</h2>
+<!-- TO ADD THE VIDEO: replace the .ph div below with
+<video controls preload="metadata" style="width:100%;aspect-ratio:16/9" src="walkthrough.mp4"><track kind="captions" src="walkthrough.vtt" srclang="en" label="English"></video>
+or, for YouTube/Loom, an <iframe title="Workflow walkthrough" src="EMBED_URL" style="width:100%;aspect-ratio:16/9;border:0" allowfullscreen></iframe> -->
+<div class="ph" role="img" aria-label="Video placeholder"><span><b>Walkthrough video to be added</b><br>It will show the workflow running in n8n, the HubSpot record, the Gmail message and the Telegram bot in the group.</span></div>
+<h2>What it does now, and what could be extended</h2>
+<p style="max-width:68ch">Today this is a customer-enquiry workflow. It is not a community onboarding system. The tools and the pattern carry over to that use, as the next section describes.</p>
+<h2>From Customer Enquiries to Community Onboarding</h2>
+<p class="mute" style="max-width:68ch">These are potential applications of the same principles. None of them is built yet.</p>
+<ul class="list"><li>Capture new-member information when someone joins.</li><li>Record member details in a CRM such as HubSpot or Airtable.</li><li>Send welcome emails and relevant resources.</li><li>Notify moderators in Telegram about new members or unresolved requests.</li><li>Direct members to resources, events or community spaces.</li></ul>
+
+<div class="grid" style="margin-top:48px;padding-top:24px;border-top:1px solid var(--line)" aria-label="Case study navigation">
+  <a class="card link" href="../smart-systems/"><span class="tag">Previous case study</span><strong style="margin-top:6px">← Smart Systems Research Laboratory</strong><span>Mechanical Engineering & Technical Systems</span></a>
+  <a class="card link" href="../akure-tech-hub/"><span class="tag">Next case study</span><strong style="margin-top:6px">Akure Tech Hub Mechatronics Community →</strong><span>Community Management</span></a>
+</div>
+</main>
+<script src="../site.js" defer></script>
+</body>
+</html>

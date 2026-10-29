@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Adediwura Afolabi · Portfolio</title>
+<title>Adediwura Afolabi · Technical Community Manager</title>
+<meta name="description" content="Technical community manager across hardware, AI and automation, with case studies in community, events, product marketing and workflow automation.">
 <style>
 :root{--bg:#faf8f4;--card:#fff;--ink:#1d1b18;--mute:#6b665e;--line:#e6e1d8;--acc:#b8650f;--acc2:#f6e7d2;--bar:#d98b2b;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -11,54 +12,140 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#15130f;--card:#201d18;--ink:#f3efe8;--mute:#a39c90;--line:#34302a;--acc:#f0a54a;--acc2:#33271a;--bar:#e39a3a}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
-main{max-width:920px;margin:0 auto;padding:32px 20px 64px}
-h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:6px 0 8px}
-h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:44px 0 14px;font-family:system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,serif}
+main{max-width:920px;margin:0 auto;padding:36px 20px 64px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 12px}
 p{margin:0}.mute{color:var(--mute)}
-.tag{font:600 12px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-.kpi b{display:block;font-size:34px;line-height:1.1;color:var(--acc)}
-.kpi span{font:14px system-ui,sans-serif;color:var(--mute)}
-.todo b{color:var(--mute)}
-.funnel .row{margin:14px 0}
-.funnel .lab{display:flex;justify-content:space-between;font:14px system-ui,sans-serif;margin-bottom:5px}
-.track{background:var(--acc2);border-radius:8px;height:30px;overflow:hidden}
-.fill{background:var(--bar);height:100%;border-radius:8px}
-.steps{counter-reset:s;display:grid;gap:12px}
-.step{display:grid;grid-template-columns:36px 1fr;gap:12px}
-.step:before{counter-increment:s;content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--acc2);color:var(--acc);display:grid;place-items:center;font:700 15px system-ui,sans-serif}
-.step h3{margin:0 0 2px;font-size:17px}
-a.link{display:block;text-decoration:none;color:inherit}
-a.link:hover{border-color:var(--acc)}
-a.link strong{display:block;font-size:16px}
-a.link span{font:13px system-ui,sans-serif;color:var(--mute)}
-.add{font:600 11px system-ui,sans-serif;color:var(--acc);background:var(--acc2);padding:2px 8px;border-radius:99px;display:inline-block;margin-top:8px}
-.num{font:700 12px system-ui,sans-serif;color:var(--acc);background:var(--acc2);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;margin-bottom:8px}
-.seg{display:flex;gap:4px;margin-top:10px}.seg i{font:600 12px system-ui,sans-serif;font-style:normal;background:var(--bar);color:#fff;padding:9px 8px;border-radius:8px;white-space:nowrap;overflow:hidden}
-.wrap{overflow-x:auto;margin-top:12px}table{border-collapse:collapse;width:100%;min-width:560px;font:14px/1.4 system-ui,sans-serif}
-th{text-align:left;color:var(--mute);font-weight:600;border-bottom:1px solid var(--line);padding:8px 6px}td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
-.more{color:var(--acc);font:600 14px system-ui,sans-serif;text-decoration:none}
-img{max-width:100%;border-radius:8px;margin-top:10px;border:1px solid var(--line)}
-.seg button{font:600 12px system-ui,sans-serif;background:var(--bar);color:#fff;border:0;padding:11px 8px;border-radius:8px;white-space:nowrap;overflow:hidden;cursor:pointer;opacity:.6}
-.seg button:nth-child(2){filter:brightness(.92)}.seg button.on,.seg button:hover{opacity:1}.seg button.on{outline:2px solid var(--ink);outline-offset:1px}
-.chip{font:600 12px system-ui,sans-serif;background:var(--acc2);color:var(--acc);border:1px solid var(--line);border-radius:99px;padding:4px 12px;margin-right:6px;cursor:pointer}.chip.on{outline:2px solid var(--ink)}
-.tall{max-height:380px;overflow:auto}
-.cover{aspect-ratio:1;background-size:cover;background-position:center;background-color:#0f1218;position:relative;padding:0;overflow:hidden;display:block;text-decoration:none}.cover:hover{border-color:var(--acc)}.cover em{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 10px;font:600 14px system-ui,sans-serif;font-style:normal;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75))}</style>
+.card{background:var(--card);border:1px solid var(--line);padding:16px}.more{font:600 14px system-ui,sans-serif;text-decoration:none}
+</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<main>
-<p class="tag">Portfolio</p>
-<h1>Adediwura Afolabi</h1>
-<p class="mute">Product marketer and Mechatronics Engineering undergraduate. Positioning, go-to-market and growth, with an engineering background. Each page below shows the work, the numbers and the thinking behind it.</p>
-<h2>Work</h2>
-<div class="grid">
-<a class="card link" href="ovies-kitchen/"><span class="tag">Case study</span><strong>Ovie’s Kitchen</strong><span>From a dormant account to 250+ paid transactions</span></a>
-<a class="card link" href="bootclass/"><span class="tag">Case study</span><strong>BootClass</strong><span>Marathon Revision Class: 500+ reached, 300+ enrolled</span></a>
-<a class="card link" href="smart-systems/"><span class="tag">Case study</span><strong>Smart Systems Research Laboratory</strong><span>A 4-degree-of-freedom robot arm, modelled in SolidWorks</span></a>
-<div class="card"><span class="tag">Coming soon</span><strong>Leadership and communities</strong><span class="mute" style="font:13px system-ui,sans-serif">Seminars, committees and community management</span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div><a class="name" href="./">Adediwura Afolabi</a>
+<nav aria-label="Main"><a href="#work">Work</a><a href="smart-systems/">Hardware</a><a href="automation/">Automation</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+<main id="main">
+<p class="mute hero-kicker" style="font:600 15px system-ui,sans-serif">Technical Community Manager | Hardware, AI &amp; Automation</p>
+<h1 style="margin-top:6px">I connect technical products with the people who use them.</h1>
+<p class="mute hero-intro" style="max-width:62ch;margin-bottom:10px">I build communities where technical people learn, show up and stay: from a 114-member engineering group to a 17-person volunteer team.</p>
+<p class="lede mute">From engineering systems and technical communities to product marketing and workflow automation, I work across the technical and human sides of building useful products.</p>
+<p class="hero-sub" style="margin-top:14px;max-width:62ch">I bridge the gap between technical products and the people who use them. My experience spans engineering systems, technical communities, product marketing, and automation workflows that connect tools and simplify operations.</p>
+<div class="btns">
+  <a class="btn main" href="#work">Explore My Work →</a>
+  <a class="btn" href="#contact">Contact Me</a>
+  <a class="icon-btn" href="mailto:adediwura.ainaafolabi@gmail.com?subject=Portfolio%20Enquiry&amp;body=Hi%20Adediwura%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20or%20project%20with%20you." aria-label="Send an email to adediwura.ainaafolabi@gmail.com" data-tip="Email: adediwura.ainaafolabi@gmail.com">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+  </a>
+  <a class="icon-btn" href="https://www.linkedin.com/in/adediwura-afolabi" target="_blank" rel="noopener noreferrer" aria-label="Adediwura Afolabi on LinkedIn (opens in new tab)" data-tip="LinkedIn: adediwura-afolabi">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+  </a>
+</div>
+
+<h2 id="work">Selected work</h2>
+<p class="mute" style="max-width:62ch">I understand technical systems, I know how to engage the people around them, and I use automation to make processes more efficient.</p>
+<h3 class="group">Technical understanding</h3><ul class="work"><li><div><h3><a href="smart-systems/">Smart Systems Research Laboratory</a></h3><p class="meta">Mechanical Engineering &amp; Technical Systems Intern · Sep–Oct 2025</p><p>I designed a 4-degree-of-freedom robot arm in SolidWorks and presented it in October 2025, and documented a multi-joint robotic arm system with 2D production drawings and assembly schematics.</p></div><div><p class="tools">SolidWorks · motion simulation · structural stress evaluation</p><a class="go" href="smart-systems/">Read the case study</a></div></li></ul><h3 class="group">Automation and operational thinking</h3><ul class="work"><li><div><h3><a href="automation/">Connecting Enquiries Across n8n, HubSpot, Gmail and Telegram</a></h3><p class="meta">Workflow builder</p><p>A customer-enquiry workflow that joins four tools, with a walkthrough and notes on how the same approach could support community onboarding.</p></div><div><p class="tools">n8n · HubSpot · Gmail · Telegram</p><a class="go" href="automation/">Read the case study</a></div></li></ul><h3 class="group">People, communication and execution</h3><ul class="work"><li><div><h3><a href="akure-tech-hub/">Akure Tech Hub Mechatronics Community</a></h3><p class="meta">Community Manager &amp; Technical Moderator · Aug 2023–Jan 2025</p><p>Moderated a 114-member technical community on Robotics, Machine Learning and 3D Mechanical Modeling, grew workshop turnout and co-hosted two online events.</p><p class="out"><b>Outcome:</b> 30+ active contributions per session; workshop turnout up 20%.</p></div><div><p class="tools">Community moderation · event hosting</p><a class="go" href="akure-tech-hub/">Read the case study</a></div></li><li><div><h3><a href="mtbabs-seminars/">MT Babs Foundation Scholars Community</a></h3><p class="meta">Lead Organizer &amp; Cross-Functional Committee Director · 2026</p><p>Got 17 volunteers from different departments and universities to work as one team across five divisions, delivering a virtual technical leadership seminar for 30 scholars.</p><p class="out"><b>Outcome:</b> Zero downtime and a 100% attendee satisfaction score.</p></div><div><p class="tools">Dry runs · contingency planning · survey analysis</p><a class="go" href="mtbabs-seminars/">Read the case study</a></div></li><li><div><h3><a href="ovies-kitchen/">Ovie’s Kitchen</a></h3><p class="meta">Product Marketing &amp; Growth Lead (Contract) · Apr 2025–Jul 2026</p><p>Took a dormant account to 250+ paid transactions with no ad budget: orders and complaints on Instagram and TikTok, organic funnels, competitor research and the Christmas Menu launch.</p><p class="out"><b>Outcome:</b> 520+ qualified enquiries and 250+ paid transactions within a year; the Christmas Menu campaign contributed 50% of seasonal sales.</p></div><div><p class="tools">Instagram · TikTok · content · SEO audits</p><a class="go" href="ovies-kitchen/">Read the case study</a></div></li><li><div><h3><a href="bootclass/">Bootclass</a></h3><p class="meta">Product Marketing &amp; Communications Intern · Feb 2024–Jan 2026</p><p>Marathon Revision Class: 500+ reached and 300+ enrolled. Student enquiries on Telegram, broadcasts, and the 21 Days of Examspiration campaign.</p><p class="out"><b>Outcome:</b> 500+ students reached, 300+ enrolled and a 30% direct increase in programme revenue.</p></div><div><p class="tools">Telegram · broadcast copy · educational content</p><a class="go" href="bootclass/">Read the case study</a></div></li></ul>
+
+<h2>Results overview</h2>
+<p class="mute" style="margin-bottom:10px">Tap any result to see where it came from.</p>
+<div class="chips"><button data-f="All" class="on">All</button><button data-f="Community">Community</button><button data-f="Events">Events</button><button data-f="Growth">Growth</button><button data-f="Technical">Technical</button></div>
+<div class="tiles" id="tiles"></div>
+<div class="card detail" id="detail" hidden></div>
+
+<h2 id="about">About</h2>
+<p style="max-width:68ch">I study Mechatronics Engineering at the Federal University of Technology Akure (B.Eng., expected November 2027, CGPA 4.71/5.00). I am looking for roles with hardware, robotics and engineering startups, developer-tool and AI companies, and technical communities.</p>
+<ul class="list"><li>Technical community management</li><li>Hardware and engineering systems</li><li>Workflow automation</li><li>Product marketing and customer engagement</li><li>Seminar coordination and cross-functional leadership</li><li>Technical documentation and communication</li></ul>
+
+<h2 id="contact">Contact</h2>
+<div class="contact-layout">
+  <div>
+    <p style="max-width:68ch">If you are hiring for technical community, ecosystem or product communications work, I would like to hear from you.</p>
+    <div class="contact-channels" aria-label="Direct contact channels">
+      <div class="channel-card">
+        <a class="channel-main" href="mailto:adediwura.ainaafolabi@gmail.com?subject=Portfolio%20Enquiry&amp;body=Hi%20Adediwura%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20or%20project%20with%20you." aria-label="Send an email to adediwura.ainaafolabi@gmail.com">
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </span>
+          <span class="channel-meta">
+            <span class="channel-label">Email</span>
+            <span class="channel-val">adediwura.ainaafolabi@gmail.com</span>
+          </span>
+        </a>
+        <button type="button" class="copy-btn" id="copy-email-btn" aria-label="Copy email address adediwura.ainaafolabi@gmail.com">Copy</button>
+      </div>
+      <a class="channel-card" href="https://www.linkedin.com/in/adediwura-afolabi" target="_blank" rel="noopener noreferrer" aria-label="Open Adediwura Afolabi's LinkedIn profile">
+        <span class="channel-main">
+          <span class="channel-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </span>
+          <span class="channel-meta">
+            <span class="channel-label">LinkedIn</span>
+            <span class="channel-val">linkedin.com/in/adediwura-afolabi</span>
+          </span>
+        </span>
+        <span class="copy-btn" aria-hidden="true">Profile ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <form id="contact-form" class="contact-form-card" novalidate aria-label="Contact Adediwura Afolabi">
+    <div class="form-grid">
+      <div class="form-row-2">
+        <div class="field">
+          <label for="contact-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required placeholder="Your full name" aria-describedby="err-name">
+          <p id="err-name" class="field-error" role="alert" hidden></p>
+        </div>
+        <div class="field">
+          <label for="contact-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" aria-describedby="err-email">
+          <p id="err-email" class="field-error" role="alert" hidden></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="contact-reason">Reason for contact <span class="req" aria-hidden="true">*</span></label>
+        <select id="contact-reason" name="reason" required aria-describedby="err-reason">
+          <option value="Technical community opportunities" selected>Technical community opportunities</option>
+          <option value="Hardware or engineering communities">Hardware or engineering communities</option>
+          <option value="Product marketing">Product marketing</option>
+          <option value="Automation projects">Automation projects</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Other">Other</option>
+        </select>
+        <p id="err-reason" class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <div class="field-head">
+          <label for="contact-message">Message <span class="req" aria-hidden="true">*</span></label>
+          <button type="button" id="reset-template-btn" class="reset-msg-btn">Reset default template</button>
+        </div>
+        <textarea id="contact-message" name="message" rows="5" required placeholder="Share a few details about the role, community, or project you have in mind..." aria-describedby="err-message">Hi Adediwura, I came across your portfolio and would like to discuss an opportunity or project with you.</textarea>
+        <p id="err-message" class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div class="form-actions">
+        <span class="form-note">All fields marked <span style="color:var(--acc)">*</span> are required.</span>
+        <button type="submit" id="contact-submit" class="btn main">Send Message →</button>
+      </div>
+    </div>
+    <div id="contact-status" class="form-status" role="status" aria-live="polite" hidden></div>
+  </form>
 </div>
 </main>
+<script>
+var D=[{"cat": "Community", "plus": 0, "n": 114, "suf": "", "label": "community members", "case": "ath", "detail": "The ATH Mechatronics community group had 114 members. I moderated it, ran its discussions and announced its workshops."}, {"cat": "Community", "plus": 0, "n": 30, "suf": "+", "label": "contributions per session", "case": "ath", "detail": "Members contributed actively in every discussion session I moderated."}, {"cat": "Community", "plus": 1, "n": 20, "suf": "%", "label": "workshop turnout", "case": "ath", "detail": "Turnout at physical tech workshops rose by 20% while I managed the community."}, {"cat": "Events", "plus": 0, "n": 17, "suf": "", "label": "volunteers coordinated", "case": "mt", "detail": "I coordinated a 17-member volunteer committee across 5 divisions: publicity, speaker engagement, technical infrastructure, registration and documentation, and seminar coordination."}, {"cat": "Events", "plus": 0, "n": 30, "suf": "", "label": "scholars, zero downtime", "case": "mt", "detail": "A virtual technical leadership seminar for 30 scholars from multiple universities ran with zero downtime."}, {"cat": "Events", "plus": 0, "n": 100, "suf": "%", "label": "attendee satisfaction", "case": "mt", "detail": "Every attendee of the seminar reported being satisfied."}, {"cat": "Growth", "plus": 0, "n": 520, "suf": "+", "label": "inbound inquiries from zero", "case": "ok", "detail": "Inbound inquiries grew from zero through a zero-budget Instagram and TikTok funnel."}, {"cat": "Growth", "plus": 0, "n": 250, "suf": "+", "label": "paid transactions", "case": "ok", "detail": "Paid transactions closed directly from those inquiries within a year."}, {"cat": "Growth", "plus": 1, "n": 50, "suf": "%", "label": "social engagement", "case": "ok", "detail": "Social engagement rose across 3 accounts within 5 months."}, {"cat": "Growth", "plus": 0, "n": 500, "suf": "+", "label": "students reached", "case": "bc", "detail": "Tertiary students reached by the Marathon Revision Class series."}, {"cat": "Growth", "plus": 0, "n": 300, "suf": "+", "label": "students enrolled", "case": "bc", "detail": "Students enrolled in the class."}, {"cat": "Growth", "plus": 1, "n": 30, "suf": "%", "label": "program revenue", "case": "bc", "detail": "Direct increase in program revenue."}, {"cat": "Technical", "plus": 0, "n": 4, "suf": "", "label": "degrees of freedom modelled", "case": "ss", "detail": "The robot arm I modelled in SolidWorks has 4 degrees of freedom."}],L={"ath": "akure-tech-hub/", "mt": "mtbabs-seminars/", "ok": "ovies-kitchen/", "bc": "bootclass/", "ss": "smart-systems/"},NAMES={"ath": "Akure Tech Hub Mechatronics Community", "mt": "MT Babs Seminar Coordination", "ok": "Ovie’s Kitchen", "bc": "BootClass", "ss": "Smart Systems Research Laboratory"};
+var tiles=document.getElementById('tiles'),det=document.getElementById('detail');
+tiles.innerHTML=D.map(function(t,i){return '<button class="tile" data-i="'+i+'"><b data-n="'+t.n+'" data-p="'+(t.plus?'+':'')+'" data-s="'+t.suf+'">'+(t.plus?'+':'')+t.n+t.suf+'</b><span>'+t.label+'</span></button>'}).join('');
+function show(i){var t=D[i];document.querySelectorAll('.tile').forEach(function(e,k){e.classList.toggle('sel',k===i)});
+det.innerHTML='<p><b>'+(t.plus?'+':'')+t.n+t.suf+' '+t.label+'</b></p><p class="mute" style="margin:4px 0 8px">'+t.detail+'</p><a href="'+L[t.case]+'">Open '+NAMES[t.case]+' →</a>';det.hidden=false}
+tiles.addEventListener('click',function(e){var b=e.target.closest('.tile');if(b)show(+b.dataset.i)});
+document.querySelector('.chips').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var f=b.dataset.f;
+document.querySelectorAll('.chips button').forEach(function(x){x.classList.toggle('on',x===b)});
+document.querySelectorAll('.tile').forEach(function(el,k){el.classList.toggle('dim',f!=='All'&&D[k].cat!==f)})});
+show(0);
+</script>
+<script src="site.js" defer></script>
 </body>
 </html>
