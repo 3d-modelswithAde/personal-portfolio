@@ -1,21 +1,10 @@
-<table align="right">
-  <tr>
-    <td align="center">
-      <img src="./adediwura-afolabi.jpg" width="220" alt="Adediwura Afolabi" /><br/>
-      <sub><b>Technical Community Manager</b><br/>AI, Automation &amp; Hardware</sub>
-    </td>
-  </tr>
-</table>
-
 # Hey, my name is Adediwura :)
 
-**Technical Community Manager · AI, Automation & Hardware** based in Ondo State, Nigeria. I connect technical products with the people who use them — building communities where engineers, developers, and students learn, show up, and stay, while designing workflow automations that connect tools and simplify operations.
+I live at the intersection of **hardware, AI automation, and human communities** — **connecting technical products and the people who use them** so great engineering actually gets adopted, loved, and turned into **revenue**. Whether I'm tuning a PID controller on an ESP32 propeller arm, modeling a 4-DOF robot arm in SolidWorks, wiring up an n8n + LLM workflow so no customer enquiry falls through the cracks, or getting 114 engineers and students to geek out over robotics and machine learning, I'm happiest where systems meet people.
 
-Over the past 3+ years, I have moderated the **114-member Akure Tech Hub Mechatrics Community** (Robotics, Machine Learning, and 3D Mechanical Modeling), directed a **17-member cross-functional volunteer committee** across 5 divisions with zero downtime and 100% attendee satisfaction, documented **drone R&D and PID flight control systems** (*Proforce Airsystems Limited*) and **4-DOF robotic arm assemblies** (*Smart Systems Research Lab*), built **AI & n8n automation pipelines** (*ContentPilot*, *Autonomous AI Intake Agent*, *GText Homes Voice Agent*), and scaled organic product funnels from **0 to 520+ qualified enquiries and 250+ paid transactions** with zero ad spend.
+Over the past 3+ years, I've moderated the **114-member Akure Tech Hub Mechatrics Community** (30+ active contributions per session, +20% physical workshop turnout), directed a **17-person cross-functional committee** across 5 divisions with zero downtime and 100% attendee satisfaction, documented **drone R&D and flight control systems** (*Proforce Airsystems*) and **multi-joint robotic arm schematics** (*Smart Systems Research Lab*), shipped **AI automation & CRM pipelines** (*ContentPilot*, *Autonomous AI Intake Agent*, *GText Homes Voice Agent*), and built zero-budget growth systems that scaled inbound enquiries from **0 to 520+**, closed **250+ paid transactions**, and drove a **30% direct increase in programme revenue**.
 
-I'm available for **Technical Community Manager**, **Developer / Hardware Ecosystem**, **Product Marketing (AI PMM)**, and **Workflow Automation** roles. If you're building a technical product, community, or intelligent automation system and want someone who bridges engineering depth with human execution, [reach out](mailto:adediwura.ainaafolabi@gmail.com) or explore my [live portfolio](https://adediwura-afolabi.vercel.app/).
-
-<br clear="right"/>
+I'm open to **Technical Community Manager**, **Developer / Hardware Ecosystem**, **AI Product Marketing (AI PMM)**, and **AI Automation** roles. If you're building something ambitious and need someone who speaks both *datasheet* and *human*, don't be a stranger — [reach out](mailto:adediwura.ainaafolabi@gmail.com) or explore my [live portfolio](https://adediwura-afolabi.vercel.app/).
 
 ---
 
