@@ -328,6 +328,68 @@ h2::before {
 }
 
 /* Hero Section Styling on Home Page */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+@media (min-width: 780px) {
+  .hero-split {
+    grid-template-columns: minmax(0, 1.35fr) 290px;
+    gap: 36px;
+    align-items: start;
+  }
+}
+
+.hero-portrait {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: var(--shadow-md);
+  max-width: 310px;
+  width: 100%;
+  justify-self: center;
+}
+
+@media (min-width: 780px) {
+  .hero-portrait {
+    justify-self: end;
+    margin-top: 4px;
+  }
+}
+
+.hero-portrait-frame {
+  border-radius: 11px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 5;
+  background: var(--acc2);
+}
+
+.hero-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+  display: block;
+}
+
+.hero-portrait-sub {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--acc2);
+  border: 1px solid var(--border-strong);
+  font: 600 12.5px/1.4 var(--font-sans);
+  color: var(--acc);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
 .hero-kicker {
   font: 600 13px/1.4 var(--font-sans) !important;
   letter-spacing: 0.06em;
