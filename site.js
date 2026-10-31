@@ -618,8 +618,123 @@
       .replace(/"/g, '&quot;');
   }
 
+  /* --------------------------------------------------------------------------
+     5. Sticky Navigation State, Mobile Toggle & Active Section Scroll-Spy
+     -------------------------------------------------------------------------- */
+  function initStickyNavigationAndSpy() {
+    var header = document.querySelector('header.site, .site');
+    if (!header) return;
+
+    function updateScrollState() {
+      if (window.scrollY > 18) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+
+    var navToggle = header.querySelector('.nav-toggle');
+    var nav = header.querySelector('nav');
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', function () {
+        var isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          header.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Highlight active link on subpages or via scroll-spy on home page
+    var navLinks = header.querySelectorAll('nav a[href]');
+    var pathname = window.location.pathname || '';
+
+    navLinks.forEach(function (link) {
+      var href = link.getAttribute('href') || '';
+      if (href.indexOf('smart-systems') !== -1 && pathname.indexOf('smart-systems') !== -1) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      } else if (href.indexOf('automation') !== -1 && pathname.indexOf('automation') !== -1) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    if ('IntersectionObserver' in window) {
+      var trackedSections = ['work', 'about', 'contact']
+        .map(function (id) {
+          return document.getElementById(id);
+        })
+        .filter(Boolean);
+
+      if (trackedSections.length) {
+        var spyObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var activeId = '#' + entry.target.id;
+              navLinks.forEach(function (link) {
+                var href = link.getAttribute('href') || '';
+                var matches = href === activeId || href.endsWith('/' + activeId);
+                link.classList.toggle('active', matches);
+                if (matches) {
+                  link.setAttribute('aria-current', 'true');
+                } else {
+                  link.removeAttribute('aria-current');
+                }
+              });
+            });
+          },
+          { rootMargin: '-28% 0px -55% 0px', threshold: 0.02 }
+        );
+
+        trackedSections.forEach(function (sec) {
+          spyObserver.observe(sec);
+        });
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     6. Subtle Viewport Entrance Animations (.reveal-up)
+     -------------------------------------------------------------------------- */
+  function initScrollReveal() {
+    var items = document.querySelectorAll('.reveal-up');
+    if (!items.length) return;
+
+    if (REDUCED_MOTION || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+      return;
+    }
+
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -24px 0px' }
+    );
+
+    items.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  }
+
   function init() {
     enhanceHeaderAndFooter();
+    initStickyNavigationAndSpy();
+    initScrollReveal();
     initNumberMotion();
     initContactSection();
   }
